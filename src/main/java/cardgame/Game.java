@@ -22,6 +22,6 @@ public class Game {
  *
  */
         deck=gamePlay.start(deck,x,y);
-        gamePlay.play(deck,x,y);;
+        gamePlay.play(deck,x,y);
     }
 }
