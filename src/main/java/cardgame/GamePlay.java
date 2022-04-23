@@ -24,17 +24,17 @@ public class GamePlay {
                 playerY.add(deck.get(0));
             deck.remove(0);
         }
-        System.out.println();
-        System.out.println("Player X : ");
+        logger.log();
+        logger.log("Player X : ");
         for(i=0;i<playerX.size();i++) {
             System.out.println(playerX.get(i).getRank()+" "+playerY.get(i).getSuit()+" ");
         }
-        System.out.println("----------------------------------------------------");
-        System.out.println("Player Y : ");
+        logger.log("----------------------------------------------------");
+        logger.log("Player Y : ");
         for(i=0;i<playerY.size();i++) {
-            System.out.println(playerY.get(i).getRank()+" "+playerY.get(i).getSuit()+" ");
+            logger.log(playerY.get(i).getRank()+" "+playerY.get(i).getSuit()+" ");
         }
-        System.out.println();
+        logger.log();
         x.receiveInitialCards(playerX);
         y.receiveInitialCards(playerY);
         return deck;
@@ -50,7 +50,7 @@ public class GamePlay {
         Card topCard;
         topCard=deck.get(0);//topcard at index position 0
         deck.remove(0);
-        System.out.println("TopCard : "+topCard.getRank()+" "+topCard.getSuit());
+        logger.log("TopCard : "+topCard.getRank()+" "+topCard.getSuit());
         Card.Suit deCsuit=null;
         while(point1<200 && point2<200) {
             /**For player 2 to draw the 3 cards for matching with the top card
@@ -117,10 +117,10 @@ public class GamePlay {
      */
     void results(int p1,int p2) {
         if(p1>=200) {
-            System.out.println("playerX wins");
+            logger.log("playerX wins");
         }
         else if(p2>=200) {
-            System.out.println("playerY wins");
+            logger.log("playerY wins");
         }
     }
 }
