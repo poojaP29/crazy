@@ -27,7 +27,7 @@ public class GamePlay {
         logger.log();
         logger.log("Player X : ");
         for(i=0;i<playerX.size();i++) {
-            System.out.println(playerX.get(i).getRank()+" "+playerY.get(i).getSuit()+" ");
+            logger.log(playerX.get(i).getRank()+" "+playerY.get(i).getSuit()+" ");
         }
         logger.log("----------------------------------------------------");
         logger.log("Player Y : ");
@@ -97,11 +97,11 @@ public class GamePlay {
              */
             if(x.myCards.size()==0  ||  deck.size()==0) {
                 point1=x.getScore(point1);
-                System.out.println("playerX :"+point1);
+                logger.log("playerX :"+point1);
             }
             if(y.myCards.size()==0  ||  deck.size()==0) {
                 point2=y.getScore(point2);
-                System.out.println("playerY :"+point2);
+                logger.log("playerY :"+point2);
             }
             if(deck.size()==0  && point1<200  &&  point2<200) {
                 deck=Card.getDeck();
