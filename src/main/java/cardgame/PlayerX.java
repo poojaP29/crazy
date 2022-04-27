@@ -21,7 +21,7 @@ public class PlayerX implements PlayerStrategy{
         this.topPileCard=topPileCard;
         this.changedSuit=changedSuit;
         if(changedSuit==null) {
-            for(int i=0;i<myCards.size();i++)   //if it rank and suit same
+            for(int i=0;i<myCards.size();i++)   //if the rank and suit same
             {
                 if(myCards.get(i).getSuit().equals(topPileCard.getSuit())  ||  myCards.get(i).getRank().equals(topPileCard.getRank()))
                 {
