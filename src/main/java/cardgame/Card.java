@@ -104,7 +104,6 @@ public class Card {
         return suit == card.suit &&
             rank == card.rank;
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(suit, rank);
