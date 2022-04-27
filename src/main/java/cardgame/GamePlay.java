@@ -27,7 +27,7 @@ public class GamePlay {
         logger.log();
         logger.log("Player X : ");
         for(i=0;i<playerX.size();i++) {
-            logger.log(playerX.get(i).getRank()+" "+playerY.get(i).getSuit()+" ");
+            logger.log(playerX.get(i).getRank()+" "+playerX.get(i).getSuit()+" ");
         }
         logger.log("----------------------------------------------------");
         logger.log("Player Y : ");
