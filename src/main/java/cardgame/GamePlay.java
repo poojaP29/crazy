@@ -53,11 +53,11 @@ public class GamePlay {
         logger.log("TopCard : "+topCard.getRank()+" "+topCard.getSuit());
         Card.Suit deCsuit=null;
         while(point1<200 && point2<200) {
-            /**For player 2 to draw the 3 cards for matching with the top card
+            /**For player y to draw the 3 cards for matching with the top card
              *
              */
             for(i=0;i<3;i++) {
-                if(x.shouldDrawCard(topCard, deCsuit)) {   //bug!!
+                if(y.shouldDrawCard(topCard, deCsuit)) {   
                     if(deck.size()!=0) {
                         y.receiveCard(deck.get(0));
                         deck.remove(0);
@@ -73,7 +73,7 @@ public class GamePlay {
                 }
             }
             /**
-             * for player 3 to draw the 3 cards for mayching with the top card
+             * for player x to draw the 3 cards for mayching with the top card
              */
             for(i=0;i<3;i++) {
                 if(x.shouldDrawCard(topCard, deCsuit)) {
